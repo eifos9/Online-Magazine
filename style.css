@@ -1,0 +1,513 @@
+/* --- css reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- css starts below --- */
+
+/* --- Page Layout --- */
+
+body { 
+    display: grid;
+    grid-template-areas: 
+      "nav header aside"
+      "nav main aside"
+      "nav footer aside";
+    grid-template-rows: 130px 1fr 130px;
+    grid-template-columns: 10% 1fr 10%;
+    grid-gap: 2px;
+    height: 100vh;
+    margin: 0;
+    font-family: "Old Standard TT", serif;
+    }
+
+/* --- Header --- */
+
+header {
+    grid-area: header;
+    background-color: #f7cacd;
+    }
+
+/* --- Logo --- */
+
+.header_logo {
+    height: 130px;
+    position: fixed;
+    z-index: 1;
+    }
+
+.logo_center {
+    margin-left: 43%;
+    }
+
+/* --- Search Bar --- */
+
+.topnav .search-container {
+    float: right;
+    }
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 50px;
+    }
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 8px;
+    margin-top: 4px;
+    margin-right: 8px;
+    background: #ffffff;
+    font-size: 17px;
+    border-radius: 50px;
+    margin-left: 5px;
+    }
+
+.topnav .search-container button:hover {
+    background: #f9c9a8;
+    }
+
+/* --- Menu Bar --- */
+
+.navbar {
+    width: 100%;
+    background-color: #f7cacd;
+    overflow: auto;
+    }
+  
+  .navbar a {
+    float: left;
+    width: 20%;
+    padding: 8px;
+    color: #ff4a00;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    }
+
+  .ikon {
+    height: 40px;
+    }
+  
+  .navbar a:hover {
+    background-color: #f9c9a8;
+    }
+
+/* --- Sub Menu --- */
+
+.subnav .subnavbtn {
+    float: left;
+    overflow: hidden;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    }
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: #f9c9a8;
+    }
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f9c9a8;
+    width: 16%;
+    z-index: 1;
+    }
+
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    }
+
+.subnav-content a:hover {
+    background-color: #eee;
+    color: #ff4a00;
+    }
+
+.subnav:hover .subnav-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 125px;
+    margin-top: 55px;
+    }
+
+/* --- Main Section Front Page --- */
+
+main {
+    grid-area: main;
+    background-color: #d1738f;
+    }
+
+.article_background {
+    grid-area: main;
+    background-color: #ffffff;
+    }
+
+h1 {
+    text-align: center;
+    color: #fff69f;
+    font-size: 60px;
+    font-weight: 200;
+    padding-top: 10px;
+    }
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 200;
+    }
+
+.mellemrum {
+    padding: 20px;
+    }
+
+article {
+    width: 90%;
+    background-color: #e096a8;
+    margin: auto;
+    border-radius: 1em;
+    }
+
+h3 {
+    text-align: start;
+    color: #fff69f;
+    font-size: 35px;
+    font-weight: 500;
+    padding: 12px;
+    padding-left: 35px;
+    }
+
+.artikler {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    }
+
+.gif {
+    height: 370px;
+    }
+
+.container {
+    position: relative;
+    }
+
+.text-block {
+    position: absolute;
+    height: 40px;
+    bottom: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 -40px 0 0 #fd6b31;
+    transition: all .5s ease-in-out;
+    }
+
+.text-block:hover {
+    box-shadow: inset 0 -150px 0 0 #ff4a00;
+    height: 100px;
+    }
+
+.artikel_link {
+    text-decoration: none;
+    color: #ffffff;
+    }
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    }
+
+.artikel {
+    height: 185px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    }
+
+/* --- Newsletter --- */
+
+.nyhedsbrev {
+    text-align: center;
+    color: #fff69f;
+    font-size: 35px;
+    font-weight: 500;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    }
+
+.container2 {
+    padding: 20px;
+    background-color: #f9c9a8;
+    border-radius: 1em;
+    }
+
+input[type=email], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 1em;
+    }
+
+input[type=checkbox] {
+    margin-top: 16px;
+    }
+
+input[type=submit] {
+    background-color: #fd6b31;
+    color: white;
+    border: none;
+    width: 90px;
+    }
+
+input[type=submit]:hover {
+    opacity: 0.8;
+    }
+
+figure {
+    width: 50%;
+    margin: auto;
+    }
+
+/* --- Navigation To Front Page --- */
+
+.nav_forside {
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    margin: 12px;
+    color: #ffffff;
+    opacity: 0.8;
+    }
+
+.nav_forside:hover {
+    opacity: 1
+    }
+
+.centered {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+    }
+
+/* --- Article Side Bar --- */
+
+.sidebar {
+    width: 24%;
+    background-color: #e096a8;
+    border-radius: 1em;
+    margin: 12px;
+    height: 500px;
+    }
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.læs_også {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 5px;
+    }
+
+.læs_også_boks {
+    text-align: center;
+    color: #fff69f;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 12px;
+    text-decoration: underline;
+    }
+
+.læs_også_text {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    }
+
+/* --- Main Section Article Content --- */
+
+.artikel_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 65%;
+    margin-right: 30px;
+    }
+
+.content_layout {
+    display: flex;
+    justify-content: space-between;
+    }
+
+h6 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+    }
+
+h5 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 500;
+    }
+
+.underrubrik {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    }
+
+.forfatter {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(99, 99, 99);
+    margin-top: -15px;
+    margin-bottom: 30px;
+    }
+
+.sp1 {
+    height: 430px;
+    width: 430px;
+    margin-top: 10px;
+    }
+
+.sp2 {
+    height: 430px;
+    width: 430px;
+    margin-top: 93px;
+    }
+
+.indhold {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    margin-right: 15px;
+    }
+
+.text_indhold {
+    margin-right: 15px;
+    margin-left: -25px;
+    margin-bottom: 50px;
+    }
+
+.indhold2 {
+    padding-bottom: 15px;
+    margin-right: 15px;
+    }
+
+.stribe1 {
+    height: 450px;
+    border: 1px solid;
+    }
+
+.stribe2 {
+    height: 200px;
+    border: 1px solid;
+    }
+
+.studietype_container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    }
+
+.studiedyr {
+    height: 190px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    }
+
+.underoverskrift {
+    font-size: 30px;
+    text-decoration: underline;
+    margin-top: 10px;
+    }
+
+.udsagn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #d1738f;
+    padding-bottom: 10px;
+    }
+
+.block {
+    display: flex;
+    flex-direction: column;
+    }
+
+.klik {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fd6b31;
+    text-decoration: none;
+    padding-bottom: 10px;
+    }
+
+.studietypedyr {
+    font-size: 20px;
+    font-weight: 600;
+    }
+
+/* --- "Background" --- */
+
+.background_left {
+    grid-area: nav;
+    background-image: url(img/baggrund\ lysere.png);
+    opacity: 50%;
+    }
+
+.background_right {
+    grid-area: aside;
+    background-image: url(img/baggrund\ lysere\ omvendt.png);
+    opacity: 50%;
+    }
+
+/* --- Footer --- */
+
+footer {
+    grid-area: footer;
+    background-color: #e5ac8a;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    }
+
+.follow {
+    display: flex;
+    justify-content: center;
+    }
+
+.some_icons {
+    height: 40px;
+    margin-top: 16px;
+    }
